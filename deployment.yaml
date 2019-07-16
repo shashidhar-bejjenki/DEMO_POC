@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pricing-microservice
+  labels:
+    app: pricing-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pricing-microservice
+  template:
+    metadata:
+      labels:
+        app: pricing-microservice
+        
+    spec:
+      containers:
+      - name: pricing-microservice
+        image: pricing-microservice:latest
+        ports:
+        - containerPort: 8080
+        
