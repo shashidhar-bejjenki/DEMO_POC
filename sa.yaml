@@ -1,0 +1,14 @@
+apiVersion: v1
+imagePullSecrets:
+- name: regcred1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2019-07-16T09:33:24Z"
+  name: default
+  namespace: pricing-service  
+  selfLink: /api/v1/namespaces/pricing-service/serviceaccounts/default
+  uid: 8c05b106-d18e-42a9-bf06-2be4bf319383
+secrets:
+- name: default-token-6w74m
+imagePullSecrets:
+- name: regcred1
